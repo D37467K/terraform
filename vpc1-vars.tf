@@ -115,14 +115,7 @@ resource "aws_instance" "MyInstance" {
   subnet_id = aws_subnet.Public_Subnet.id
   key_name = "terraformkey"
   vpc_security_group_ids =  [aws_security_group.allow_tls.id]
-  user_data = <<-EOF
-        #!/bin/bash
-        sudo yum update -y
-        sudo yum install httpd -y
-        sudo service httpd restart
-        cd /var/www/html
-        echo "Hi This is Terraform" > index.html
-        EOF
+  user_data = "${file("apache.sh")}"
    tags = {
     Name = "EC2_Public"
   }
