@@ -25,7 +25,7 @@ resource "aws_subnet" "Private_Subnet" {
   vpc_id     = aws_vpc.My_VPC.id
   cidr_block = "10.0.0.16/28"
   tags = {
-    Name = "Private_Subnet"
+    Name = "Private_Subnet1"
   }
 }
 resource "aws_route_table" "Public_RT" {
