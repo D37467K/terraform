@@ -1,7 +1,7 @@
 provider "aws" {
   region     = "us-east-2"
-  access_key = "AKIASNEA4MTSOSJTHSUC"
-  secret_key = "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"
+  access_key = "AKIA4GU5XMFT72TAJMUL"
+  secret_key = "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"
 }
 variable "vpc_prefix"{
   description = "Enter the CIDR Block for VPC"
